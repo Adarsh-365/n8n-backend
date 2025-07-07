@@ -7,3 +7,4 @@ langgraph
 langchain_groq
 typing_extensions
 langchain-google-genai
+django-cors-headers
