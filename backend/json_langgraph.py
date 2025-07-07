@@ -8,7 +8,7 @@ import os
 from langchain_groq import ChatGroq
 
 
-os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+os.environ["GROQ_API_KEY"] = ""
 # os.environ["TAVILY_API_KEY"] = "YOUR_TAVILY_API_KEY"
 
 
