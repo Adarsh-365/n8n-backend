@@ -1,0 +1,9 @@
+﻿asgiref==3.8.1
+Django==5.1.5
+sqlparse==0.5.3
+tzdata==2024.2
+whitenoise==6.8.2
+langgraph
+langchain_groq
+typing_extensions
+langchain-google-genai
