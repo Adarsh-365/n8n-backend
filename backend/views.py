@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 from .json_langgraph import llm_response
 from ._model import CreateWorkflow
 
+def home(request):
+    return render(request,'index.html')
+
 @csrf_exempt
 def index(request):
     # Add CORS headers
