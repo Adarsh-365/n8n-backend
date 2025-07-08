@@ -5,23 +5,24 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 # from .json_langgraph import llm_response
 from ._model import CreateWorkflow
-
-def home(request):
-    return render(request,'index.html')
-
+import re
 @csrf_exempt
 def index(request):
     # Add CORS headers
  
     if request.method == "POST":
-        print("Received POST request")
+       
         data = json.loads(request.body)
-        print("Received data:", data)
+  
         # user_input = data['prompt']
         # response = llm_response(user_input)
         op = CreateWorkflow(json_op = data)
-        # print(response)
+      
         response1 = op["messages"][-1].content
+    
+        match = re.search(r"AIMessage\(content=['\"](.*?)['\"]", response1)
+        if match:
+            response1 = match.group(1)
         # print(response)
         return JsonResponse({"Output":response1})
        
