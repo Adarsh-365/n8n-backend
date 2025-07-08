@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from ._model import CreateWorkflow
 import re
 def home(request):
-    render(request,"index.html")
+    return render(request,"index.html")
 
 
 @csrf_exempt
