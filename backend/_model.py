@@ -5,7 +5,8 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 import os
 from langchain_groq import ChatGroq
-
+import dotenv
+dotenv.load_dotenv()   
 from langchain_google_genai import ChatGoogleGenerativeAI
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
