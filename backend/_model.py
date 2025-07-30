@@ -34,6 +34,8 @@ def prompt_function(state: State):
 
 def Set_LLM(api,key):
     LLM = None
+    if key = "":
+        return None
     print("setting llm to ", api)
     if api == "GROQ":
         os.environ['GROQ_API_KEY'] = key
