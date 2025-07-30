@@ -34,7 +34,7 @@ def prompt_function(state: State):
 
 def Set_LLM(api,key):
     LLM = None
-    if key = "":
+    if key == "":
         return None
     print("setting llm to ", api)
     if api == "GROQ":
