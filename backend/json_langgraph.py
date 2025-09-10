@@ -13,8 +13,7 @@ os.environ["GROQ_API_KEY"] = ""
 
 
 # Set proxy for internet access (adjust if your proxy is different)
-# os.environ["HTTP_PROXY"] = "http://proxy-dmz.intel.com:912"
-# os.environ["HTTPS_PROXY"] = "http://proxy-dmz.intel.com:912"
+
 class State(TypedDict):
     # Messages have the type "list". The `add_messages` function
     # in the annotation defines how this state key should be updated
@@ -48,6 +47,7 @@ graph = graph_builder.compile()
 def llm_response(user_input: str):
     op = graph.invoke({"messages": [{"role": "user", "content": user_input}]})
     return op["messages"][-1].content
+
 
 
 
